@@ -1,7 +1,7 @@
 from django.db import models
 
 # Create your models here.
-class Registration(models.Model):
+class MamaMboga(models.Model):
     name = models.CharField(max_length=30)
     location=models.TextField()
     contact=models.IntegerField()

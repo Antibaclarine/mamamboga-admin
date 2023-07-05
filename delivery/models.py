@@ -7,3 +7,6 @@ class Deliver(models.Model):
     order_status = models.CharField(max_length=20)
     delivery_method = models.CharField(max_length=10)
     delivery_person = models.CharField(max_length=25)
+    def __str__(self):
+        return self.delivery_person
+       

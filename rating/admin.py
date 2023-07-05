@@ -1,7 +1,7 @@
 from django.contrib import admin
 
 # Register your models here.
-from .models import Rates
+from .models import Rate
 class RegistrationAdmin(admin.ModelAdmin):
-    details_display=("review_message","sender"," value","date","product")
-    admin.site.register(Rates)
+    list_display=("review_message","date")
+admin.site.register(Rate,RegistrationAdmin)
