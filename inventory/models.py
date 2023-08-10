@@ -1,9 +1,10 @@
 from django.db import models
-
+from vendor.models import MamaMboga
 # Create your models here.
 
 
 class Product(models.Model):
+    vendor=models.ForeignKey(MamaMboga,on_delete=models.CASCADE)
     name = models.CharField(max_length=32)
     description = models.TextField()
     image = models.ImageField()
@@ -14,4 +15,3 @@ class Product(models.Model):
   
 def __str__(self):
       return self.name
-    
