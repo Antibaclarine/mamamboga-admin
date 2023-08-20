@@ -1,4 +1,6 @@
 from django.shortcuts import render,redirect
+
+from basket.models import Basket
 from .forms import BasketForm
 
 def create_basket(request):
@@ -10,3 +12,6 @@ def create_basket(request):
     else:
             form =BasketForm()
             return render(request, 'basket/basket_form.html', {'form':form})
+def basket_list(request):
+    baskets = Basket.objects.all()
+    return render(request, 'basket/basket_list.html', {'baskets': baskets})

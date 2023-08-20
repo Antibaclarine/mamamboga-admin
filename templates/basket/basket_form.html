@@ -3,15 +3,15 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        {% comment %} {% load static %}
-        <link rel="stylesheet"href="{% static 'CSS/form.css' %}"> {% endcomment %}
+        {% load static %}
+        <link rel="stylesheet"href="{% static 'CSS/form.css' %}"> 
         <title>Document</title>
     </head>
     <body>
         <h3 class="upload-heading">Basket</h3>
         <form method="POST" class="upload-form" enctype="multipart/data">
         {% csrf_token %} {{form.as_p}}
-        <button type='submit'>Save</button>
+        <a href="{% url 'basket_list_view'  %}"><button type='submit'>Save</button></a><td/>
     </form>
 </body>
     </html>

@@ -4,8 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    {% comment %} {% load static %}
-    <link rel="stylesheet" href="{% static 'CSS/product-list.css' %}"> {% endcomment %}
+    {% load static %}
+     <link rel="stylesheet" href="{% static 'CSS/product-list.css' %}"> 
     <title>Document</title>
 </head>
 <body>
@@ -25,10 +25,7 @@
                 <td >{{ customer.name }}</td>
                 <td >{{ customer.location }}</td>
                 <td >{{ customer.contacts}}</td>
-                 <td>
-                    <a href="{% url 'customer_detail_view' user_id=customer.user_id %}">View details</a>
-                </td>
-                <td><a href="{% url 'edit_customer_view' user_id=customer.user_id %}">Edit Details</a><td/> 
+                 
             </tr>
             {%endfor%}
         </tbody>
