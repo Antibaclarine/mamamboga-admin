@@ -1,4 +1,11 @@
-
+:root {
+  --primary-color: #f9a826;
+  --secondary-color: #007bff;
+  --background-color: #f9f9f9;
+  --text-color: #333333;
+  --border-color: #dddddd;
+  --box-shadow-color: rgba(0, 0, 0, 0.2);
+}
 
 .container {
     display: flex;
@@ -50,12 +57,12 @@
     font-size: 16px;
     font-weight: bold;
     color: #fff;
-    background-color: #007bff;
+    background-color:#f9a826;
     border: none;
     border-radius: 4px;
     cursor: pointer;
   }
   
   .upload-form button:hover {
-    background-color: #0056b3;
+    background-color: #f9a826;
   }

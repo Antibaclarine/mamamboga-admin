@@ -1,61 +1,73 @@
+:root {
+  --primary-color: #f9a826;
+  --secondary-color: #007bff;
+  --background-color: #f9f9f9;
+  --text-color: #333333;
+  --border-color: #dddddd;
+  --box-shadow-color: rgba(0, 0, 0, 0.2);
+}
 
+@keyframes fadeIn {
+  0% {
+      opacity: 0;
+  }
+  100% {
+      opacity: 1;
+  }
+}
 
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f9f9f9;
-  }
-  
-  h4 {
-    text-align: center;
-    margin-top: 20px;
-  }
-  
-  .upload-form {
-    max-width: 500px;
-    margin: 20px auto;
-    padding: 20px;
-    background-color: #ffffff;
-    border: 1px solid #dddddd;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-  }
-  
-  .upload-form label {
-    display: block;
-    margin-bottom: 10px;
-    font-weight: bold;
-  }
-  
-  .upload-form input[type="text"],
-  .upload-form textarea {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #dddddd;
-    border-radius: 4px;
-    box-sizing: border-box;
-  }
-  
-  .upload-form textarea {
-    height: 100px;
-  }
-  
-  .upload-form button[type="submit"] {
-    display: block;
-    width: 100%;
-    padding: 10px;
-    margin-top: 20px;
-    background-color: #007bff;
-    color: #ffffff;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-  }
-  
-  .upload-form button[type="submit"]:hover {
-    background-color: #0056b3;
-  }
- 
+  font-family: Arial, sans-serif;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  margin: 0;
+  padding: 0;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+h4 {
+  text-align: center;
+  margin-top: 20px;
+}
+
 form {
-    margin: 0 auto;
-    text-align: center;
-  }
-  
+  margin-top: 20px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+}
+
+input[type="text"],
+input[type="number"],
+textarea {
+  width: 100%;
+  padding: 10px;
+  border-radius: 4px;
+  border: 1px solid var(--border-color);
+}
+
+button[type="submit"] {
+  padding: 10px 20px;
+  background-color: var(--primary-color);
+  color: #ffff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+button[type="submit"]:hover {
+  background-color: var(--primary-color);
+}
